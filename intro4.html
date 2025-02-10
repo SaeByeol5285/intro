@@ -36,9 +36,10 @@
         }
         .footers{
             width: 1200px;
-            height: 200px;
+            height: 100px;
             clear: both;
             background-color: black;
+            color: white;
         }
         
         /* 박스 */
@@ -57,6 +58,13 @@
             margin-bottom: 20px;
             margin-right: 20px;
         }
+        .box3{
+            width: 220px;
+            height: 300px;
+            animation: imgChange 7s alternate infinite;
+            margin: 20px 35px;
+            padding: 2px;
+        }
 
         /* 텍스트 스타일 */
         .txt_bold{
@@ -74,7 +82,6 @@
             color: white;
             font-weight: bold;
             text-align: center;
-
         }
         .txt_title3{
             font-size: 20px;
@@ -135,20 +142,29 @@
             }
             .box1{
                 width: 70%;
-
             }
             .footers{
                 width: 100%;
-
             }
             #info{
                 float: right;
             }
         }
+
         #time{
             font-size: 30px;
             font-weight: bold;
             color: black;
+        }
+        @keyframes imgChange {
+            from{
+                background-image: url(img/cat2.jpg);
+                background-size: cover;
+            }
+            to{
+                background-image: url(img/cat3.jpg);
+                background-size: cover;
+            }
         }
 
     </style>
@@ -175,8 +191,8 @@
         </div>
 
         <div class="sidebar">
+            <div class="box3"></div>
             <div style="margin: 20px 50px;">
-                <img id="change" src ="img/cat1.jpg" width="200px">
                 <div id="info">
                     <div class="txt_title1 txt_bold" style="margin-top: 20px; text-shadow: 2px 2px 1px lightpink;">Cat_Coding</div>
                     <div style="margin-top: 20px;"> Tel. 010-1234-5678 </div>
@@ -265,6 +281,7 @@
     </div>
 
     <div class="footers">
+        <div style="margin-left: 450px;">Copyright Cat_Coding. All rights reserved.</div>
     </div>
 
 </body>
