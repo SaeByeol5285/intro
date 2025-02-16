@@ -108,16 +108,37 @@
             font-style: normal;
             font-size: 18px;
         }
+        .txt_header{
+            float: left; 
+            margin-top: 120px;
+        }
         .pink_shadow{
             text-shadow: 2px 2px 1px lightpink;
         }
 
+        /*이미지*/
+        /* header1 */
+        #cat-hand{
+            width: 70px;
+        }
+        /* header2 */
+        #note-book{
+            width: 100px;
+            float: left;
+            margin-top: 70px;
+        }
+        #main-cat{
+            width: 220px;
+            float: left; 
+            margin-right: 10px auto;
+        }
         /* 테이블 스타일 */
         table {
             width: 500px;
             border:1px solid #222; 
             border-collapse: collapse;
         }
+
         th,td {
             border:1px solid #ccc; 
             padding:5px;  
@@ -131,34 +152,64 @@
 
         @media screen and (max-width : 768px) {
             .container{
-                width: 100%;
+                width: 90%;
                 margin: 20px auto;
+                display: flex;
+                flex-direction: column;
             }
             .header1, .header2{
                 width: 100%;
-                float: none;
                 text-align: center;
+                display: block;
+            }
+            .header1{
+                order : 1;
             }
             .header2{
-                height: 350px;
+                height: 240px;
+                order: 2;
             }
-            .sidebar{
-                position: absolute;
-                bottom: 100px;
-                left: 0px;
-                width: 100%;
-                height: auto;
+            .txt_title1{
+                font-size: 25px;
+            }
+            .txt_title2{
+                font-size: 30px;
+            }
+            .txt_header{
+                font-size: 10px;
+                margin-top: 70px;
+            }
+            #cat-hand{
+                width: 35px;
+            }
+            #note-book{
+                width: 70px;
+            }
+            #main-cat{
+                width: 150px;
+                margin: 10px auto;
+            }
+            .noto-sans-kr-contents {
+                font-size: 15px;
+            }
+            .sidebar {
+                position: relative; 
+                width: 100%;        
+                height: auto;       
                 text-align: center;
+                padding: 10px;      
+                order: 4;
             }
             .footer{
-                position : absolute;
-                bottom: 0;
+                display: block;
                 width: 100%;
+                order: 5;
             }
             .contents{
                 width: 100%;
                 height: auto;
-                float: none;
+                display: block;
+                order: 3;
             }
             .side_box{
                 float: left;
@@ -168,12 +219,14 @@
                 width: 90%;
             }
             #topMenu ul li {
-                width: 25%;
+                width: 15%;
+                
             }
             #topMenu .menuLink{
-                width: 100%;
-                margin: 0px auto;
-                padding: 20px;
+                font-size: 18px !important;
+                width: 15%; 
+                padding: 0px;
+
             }
             .subcontents{
                 width: 90%;
@@ -257,7 +310,7 @@
     <div class="container noto-sans-kr-contents">
         <div class="header1 in_bl noto-sans-kr-title txt_title1">
             INTRODUCE
-            <a  href="https://saebyeol5285.github.io/intro/intro_upload.html"><img src ="img/cathand1.png" style="width: 70px;"></a>
+            <a  href="https://saebyeol5285.github.io/intro/intro_upload.html"><img src ="img/cathand1.png" id ="cat-hand"></a>
         </div>
 
         <div class="header2">
@@ -266,9 +319,9 @@
                 <div><span class="txt_pink">코딩하는 고양이</span>입니다.</div>
             </div>
             <div class="in_bl">
-                <img src="img/notebook_icon.png" width="100px" style="float: left; margin-top: 70px;">
-                <img src="img/cat1.png" width="220px" style="float: left; margin-right: 10px auto;">
-                <div class="txt_white" style="float: left; margin-top: 120px;">
+                <img src="img/notebook_icon.png" id="note-book">
+                <img src="img/cat1.png" id="main-cat">
+                <div class="txt_header txt_white">
                     <div>프로그래밍에 관심이 많습니다.</div>
                     <div>현재 열심히 공부하며 코딩 중!</div>
                 </div>         
@@ -289,8 +342,6 @@
                 </div>
                 <hr>
                 <div>현재시간 : <span id = "time"></span></div>
-                    
-                
             </div>
         </div>
 
