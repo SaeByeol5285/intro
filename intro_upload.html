@@ -51,6 +51,7 @@
             background-color: black;
             color: white;
             clear: both;
+            text-align: center;
         }
         .side_box{
             width: 170px;
@@ -132,13 +133,22 @@
             float: left; 
             margin-right: 10px auto;
         }
+        #git{
+            width: 50px;
+        }
+        #velog{
+            width: 90px;
+        }
+        #naver{
+            width: 50px;
+        }
         /* 테이블 스타일 */
         table {
             width: 500px;
             border:1px solid #222; 
             border-collapse: collapse;
+            margin: 10px auto;
         }
-
         th,td {
             border:1px solid #ccc; 
             padding:5px;  
@@ -149,7 +159,7 @@
             background-color: lightgrey;
         }
         
-
+        /* 모바일 */
         @media screen and (max-width : 768px) {
             .container{
                 width: 90%;
@@ -166,7 +176,7 @@
                 order : 1;
             }
             .header2{
-                height: 240px;
+                height: 225px;
                 order: 2;
             }
             .txt_title1{
@@ -197,13 +207,19 @@
                 width: 100%;        
                 height: auto;       
                 text-align: center;
-                padding: 10px;      
                 order: 4;
             }
-            .footer{
-                display: block;
-                width: 100%;
-                order: 5;
+            .side_box{
+                float: left;
+                margin-left: 30px;
+                width: 80px;
+                height: 110px;
+            }
+            #git, #naver{
+                width: 30px;
+            }
+            #velog{
+                width: 50px;
             }
             .contents{
                 width: 100%;
@@ -211,25 +227,41 @@
                 display: block;
                 order: 3;
             }
-            .side_box{
-                float: left;
-                margin-left: 30px;
+            #topMenu{
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
             }
             #topMenu ul {
-                width: 90%;
+                width: 100%;
+                list-style: none;
+                padding: 0;
             }
             #topMenu ul li {
-                width: 15%;
-                
+                width: 100% !important;
+                height: 40px;
+                display: block;
+                text-align: center;
+                clear: both;
+                margin: 2px 0;
             }
             #topMenu .menuLink{
                 font-size: 18px !important;
-                width: 15%; 
-                padding: 0px;
-
+                display: block;
             }
             .subcontents{
                 width: 90%;
+                margin-top: 240px;
+            }
+            .footer{
+                display: block;
+                width: 100%;
+                order: 5;
+            }
+            table {
+                width: 100%;
+                margin: 0 auto;
             }
         }
 
@@ -336,9 +368,9 @@
                 <div> <span class="txt_bold">Email.</span> Cat_Coding@gmail.com </div>
                 <div> <span class="txt_bold">Addr.</span> Incheon, Korea </div>
                 <div id="sns">
-                    <a href = "https://github.com/SaeByeol5285/intro.git" target='_blank'><img src = "img/git-icon.png" style="width: 50px;"></a>
-                    <a href = "https://velog.io/@saebyeol5285/posts" target='_blank'><img src = "img/velog-icon.png" style="width: 90px;"></a> 
-                    <a href = "https://blog.naver.com/cat_coding" target='_blank'><img src = "img/naver-blog-icon.png" style="width: 50px;"></a>
+                    <a href = "https://github.com/SaeByeol5285/intro.git" target='_blank'><img src = "img/git-icon.png" id="git"></a>
+                    <a href = "https://velog.io/@saebyeol5285/posts" target='_blank'><img src = "img/velog-icon.png" id="velog"></a> 
+                    <a href = "https://blog.naver.com/cat_coding" target='_blank'><img src = "img/naver-blog-icon.png" id="naver"></a>
                 </div>
                 <hr>
                 <div>현재시간 : <span id = "time"></span></div>
@@ -389,8 +421,8 @@
                 </div>
     
                 <div id="education">
-                    <table class="noto-sans-kr-contents" style="margin: 10px auto;">
-                        <t>
+                    <table>
+                        <tr>
                             <th>출신학교</th>
                             <th>전공</th>
                             <th>기간</th>
@@ -412,7 +444,7 @@
                 </div>
             </div>                
         </div>
-        <div class="footer" style="text-align: center;">
+        <div class="footer">
             <div style="padding: 35px"> Copyright Cat_Coding. All rights reserved.</div>
         </div>
     </div>
