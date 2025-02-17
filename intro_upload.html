@@ -199,7 +199,7 @@
                 width: 50px;
             }
             #main-cat{
-                width: 120px;
+                width: 150px;
                 margin: 10px auto;
             }
             .noto-sans-kr-contents {
@@ -269,7 +269,6 @@
             }
             #education{
             right: 20%;
-
 		}
         }
         #time{
@@ -277,6 +276,7 @@
             font-weight: bold;
             color: black;
         }
+
 
         /*menu*/
         #topMenu{
@@ -355,6 +355,9 @@
         .text_box{
             display: block;
         }
+        ul{
+            margin-bottom: 30px;
+        }
 
         /* 다크모드 */
         .light-mode{
@@ -405,10 +408,6 @@
             font-size: 50px;
             font-weight: bold;
         }
-
-
-        
-
     </style>
 
 </head>
@@ -470,23 +469,18 @@
                         <li>프론트엔드
                             <ul>
                                 <li>HTML/CSS</li>
-                                <li>웹 페이지를 잘 만듭니다.</li>
+                                <li>홍보물, 교육자료 제작 경험이 있습니다.</li>
+                                <li>깔끔한 웹페이지를 제작합니다.</li> 
                             </ul>  
                         </li>
                         <li>백엔드
                             <ul>
-                                <li>자바를 잘 합니다.</li>
-                                <li>오라클은 더욱 잘 합니다.</li>
+                                <li>구조적으로 사고하고 계획을 세우는 작업을 좋아합니다.</li>
+                                <li>JAVA : 기초 이론을 꼼꼼히 정리했습니다.</li>
+                                <li>DB : Oracle을 이용한 데이터베이스 관리를 철저히 학습했습니다.</li>
                             </ul>
                         </li>
-                        <li>계획
-                            <ul>
-                                <li>Spring</li>
-                                <li>MSA</li>
-                                <li>Fluter</li>
-                                <li>Node.js</li>
-                            </ul>
-                        </li>
+                        
                     </ul>
                 </div>
     
@@ -495,6 +489,14 @@
                         <li>자바</li>
                         <li>오라클</li>
                         <li>HTML&CSS</li>
+                        <li>앞으로의 학습 계획
+                            <ul>
+                                <li>Spring</li>
+                                <li>MSA</li>
+                                <li>Fluter</li>
+                                <li>Node.js</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
     
@@ -594,17 +596,18 @@
     let intervalId = setInterval(typing, 200);
 
     function typing() {
+        let txt = title.charAt(i);
         if(i < 6){
-            let txt = title.charAt(i);
             document.querySelector("#first").innerHTML += txt;
         } else if(i < 15){
-            let txt = title.charAt(i);
             document.querySelector("#second").innerHTML += txt;
         } else {
-            let txt = title.charAt(i);
             document.querySelector("#last").innerHTML += txt;
         }
         i++;
-    }
+        if(i>18){
+            clearInterval(intervalId);
+        }
+    };
 
 </script>
