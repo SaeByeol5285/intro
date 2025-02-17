@@ -199,7 +199,7 @@
                 width: 50px;
             }
             #main-cat{
-                width: 150px;
+                width: 120px;
                 margin: 10px auto;
             }
             .noto-sans-kr-contents {
@@ -219,10 +219,10 @@
                 height: 110px;
             }
             #git, #naver{
-                width: 30px;
+                width: 25px;
             }
             #velog{
-                width: 50px;
+                width: 45px;
             }
             .contents{
                 width: 100%;
@@ -272,7 +272,6 @@
 
 		}
         }
-
         #time{
             font-size: 30px;
             font-weight: bold;
@@ -319,22 +318,29 @@
             top : 50px;
             left: 20%;
             padding-top: 20px;
-			display: none;
 		}
         #skills{
             position: absolute;
             top : 50px;
             left: 20%;
 			padding-top: 20px;
-			display: none;
 		}
         #education{
             position: absolute;
             top : 50px;
             left: 20%;
 			padding-top: 20px;
-			display: none;
 		}
+        .subcontents > div {
+            opacity: 0;
+            transform: translateY(-30px); /* 위로 살짝 올라간 상태 */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* 부드러운 전환 효과 */
+        }
+        .subcontents > div.show {
+            opacity: 1;
+            transform: translateY(0); /* 자연스럽게 나타나게 */
+        }
+
         /* 기타 */
         a{
             text-decoration: none;
@@ -346,6 +352,10 @@
         #sns img{
             margin-left: 12px;
         }
+        .text_box{
+            display: block;
+        }
+
         /* 다크모드 */
         .light-mode{
             background-color: white;
@@ -374,12 +384,30 @@
             background-color: white;
             border-radius: 40%;
         }
+        .dark-mode #topMenu .menuLink.active{
+            background-color: rgb(247, 140, 156);
+            color: black;
+            text-shadow: none;
+        }
+        .dark-mode #topMenu .menuLink{
+            background-color: lightpink;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+        .dark-mode #topMenu .menuLink:hover{
+            color: black;
+            background-color: rgb(247, 140, 156);
+            text-shadow: none;
+        }
         #icon{
             cursor: pointer;
             float: right;
             font-size: 50px;
             font-weight: bold;
         }
+
+
+        
 
     </style>
 
@@ -393,9 +421,12 @@
         </div>
 
         <div class="header2">
-            <div class="noto-sans-kr-title txt_white txt_title2">
-                <div>안녕하세요!</div>
-                <div><span class="txt_pink">코딩하는 고양이</span>입니다.</div>
+            <div class="text-box noto-sans-kr-title txt_title2">
+                <span class="text">
+                    <span class='txt_white' id="first"></span>
+                    <br><span class='txt_pink' id="second"></span>
+                    <span class='txt_white' id="last"></span>
+                </span>
             </div>
             <div class="in_bl">
                 <img src="img/notebook_icon.png" id="note-book">
@@ -427,7 +458,7 @@
         <div class="contents">
             <div id = "topMenu">
                 <ul>
-                    <li><a class = "menuLink" href ="https://saebyeol5285.github.io/intro/intro_upload.html">Home</a></li>
+                    <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(0)">Home</a></li>
                     <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(1)">Experience</a></li>
                     <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(2)">Skills</a></li>
                     <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(3)">Education</a></li>
@@ -440,7 +471,7 @@
                             <ul>
                                 <li>HTML/CSS</li>
                                 <li>웹 페이지를 잘 만듭니다.</li>
-                            </ul>
+                            </ul>  
                         </li>
                         <li>백엔드
                             <ul>
@@ -476,15 +507,15 @@
                             <th>구분</th>
                         </tr>
                         <tr>
-                            <td>좋은대학교</td>
-                            <td>좋은학과</td>
-                            <td>2010.3 ~ 2013.2</td>
+                            <td>00대학교</td>
+                            <td>00학과</td>
+                            <td>2016.3 ~ 2023.2</td>
                             <td>졸업</td>
                         </tr>
                         <tr>
-                            <td>꽤좋은고등학교</td>
+                            <td>00고등학교</td>
                             <td> - </td>
-                            <td>2007.3 ~ 2009.2</td>
+                            <td>2012.3 ~ 2016.2</td>
                             <td>졸업</td>
                         </tr>
                     </table>
@@ -502,6 +533,7 @@
 </html>
 
 <script>
+    //------------시계기능------------
     setInterval(()=>{
         let datetime = new Date();
         let time = datetime.getHours() + ":" + datetime.getMinutes() + ":" + datetime.getSeconds()
@@ -509,7 +541,9 @@
         obj.innerHTML=time;
     },1000);
 
+    //------------메뉴 클릭시 설명 펼쳐보기------------
     function fnDetail(num){
+
         let experience = document.getElementById("experience");
         let skills = document.getElementById("skills");
         let education = document.getElementById("education");
@@ -518,23 +552,30 @@
         for(let i=0; i<menuLinks.length; i++){
             menuLinks[i].classList.remove("active");
         }
-        
-        experience.style.display = "none";
-        skills.style.display = "none";
-        education.style.display = "none";
+
+        experience.classList.remove("show");
+        skills.classList.remove("show");
+        education.classList.remove("show");
 
         if(num == 1){
-            experience.style.display = "block";
-            menuLinks[1].classList.add("active");
+            experience.classList.add("show"); //내용 보이기
+            menuLinks[1].classList.add("active"); //현재 메뉴탭은 짙은 색으로 보이기
         } else if(num == 2){
-            skills.style.display = "block";
+            skills.classList.add("show");
             menuLinks[2].classList.add("active");
         } else if(num == 3){
-            education.style.display = "block";
+            education.classList.add("show");
             menuLinks[3].classList.add("active");
-        }
+        } else if(num == 0){
+            if(!confirm("Home으로 다시 돌아가시겠습니까?")){
+                return;
+            }else{
+                location.href ="https://saebyeol5285.github.io/intro/intro_upload.html";
+            }
+        };
     };
-
+    
+    //------------라이트,다크 모드 지원------------
     function fnMode(){
         let body = document.body;
         let icon = document.querySelector("#icon");
@@ -544,4 +585,26 @@
 
         icon.innerText = body.classList.contains('light-mode')? 'light_mode' : 'dark_mode';
     };
+    
+    //------------메인 타이틀 타이핑 효과------------
+    let title = "안녕하세요! 코딩하는 고양이입니다.";
+    let text = document.querySelector(".text");
+
+    let i = 0;
+    let intervalId = setInterval(typing, 200);
+
+    function typing() {
+        if(i < 6){
+            let txt = title.charAt(i);
+            document.querySelector("#first").innerHTML += txt;
+        } else if(i < 15){
+            let txt = title.charAt(i);
+            document.querySelector("#second").innerHTML += txt;
+        } else {
+            let txt = title.charAt(i);
+            document.querySelector("#last").innerHTML += txt;
+        }
+        i++;
+    }
+
 </script>

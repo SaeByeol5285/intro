@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 영역구분 */
+        .container{
+            width: 1200px;
+            margin: 20px auto;
+        }
+        .header1{
+            width: 100%;
+            height: 50px;
+        }
+        .header2{
+            width: 100%;
+            height: 250px;
+            background-color: black;
+            text-align: center;
+        }
+        .sidebar{
+            width: 250px;
+            height: 800px;
+            float: left;
+            background-color: lightgrey;            
+        }
+        .contents{
+            width: 950px;
+            height: 800px;
+            background-color: white;
+            float: left;
+        }
+        .subcontents{
+            width: 650px;
+            height: 300px;
+            background-color: rgba(211, 211, 211, 0.388);
+            margin: 100px auto;
+        }
+        .footers{
+            width: 100%;
+            height: 100px;
+            clear: both;
+            background-color: black;
+            color: white;
+            clear: both;
+        }
+
+
+        .box3{
+            width: 170px;
+            height: 200px;
+            animation: imgChange 7s alternate infinite;
+            margin: 20px 35px;
+            padding: 2px;
+        }
+        @keyframes imgChange {
+            from{
+                background-image: url(img/cat2.jpg);
+                background-size: cover;
+            }
+            to{
+                background-image: url(img/cat3.jpg);
+                background-size: cover;
+            }
+        }
+        
+
+        
+        /* 텍스트 스타일 */
+        .txt_bold{
+            font-weight: bold;
+        }
+        .txt_white{
+            color: white;
+        }
+        .txt_title1{
+            font-size: 35px;
+            color: black;
+        }
+        .txt_title2{
+            font-size: 50px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        .txt_title3{
+            font-size: 15px;
+            margin: 5px;
+            color: white;
+            font-weight: 500;
+        }
+        .txt_contents{
+            color: black;
+            font-size: 20px;
+        }
+        .in_bl{
+            display: inline-block;
+        }
+        .txt_pink{
+            color: lightpink;
+        }
+
+        /* 테이블 스타일 */
+        table {
+            width: 500px;
+            border:1px solid #222; 
+            border-collapse: collapse;
+        }
+        th,td {
+            border:1px solid #ccc; 
+            padding:5px;  
+            font-size:20px;
+            text-align: center; 
+        }
+
+        /* @media screen and (max-width : 768px) {
+            .container{
+                width: 600px;
+                margin: 20px auto;
+            }
+            .header{
+                width: 100%;
+                height: 50px;
+            }
+            .contents1{
+                width: 100%;
+                height: 320px;
+                background-color: black;
+                text-align: center;
+            }
+            .sidebar{
+                width: 100%;
+                height: 260px;
+            }
+            .contents2{
+                width: 100%;
+                height: auto;
+            }
+            table{
+                width: 90%;
+            }
+            .box1{
+                width: 70%;
+            }
+            .footers{
+                width: 100%;
+            }
+            #info{
+                float: right;
+            }
+        } */
+
+        #time{
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+        }
+
+        /*menu*/
+        #topMenu{
+            height: 40px;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        #topMenu ul li {
+            list-style: none;
+            color: white;
+            background-color: black;
+            float: left;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        #topMenu .menuLink{
+            text-decoration: none;
+            color: white;
+            display: block;
+            width: 200px;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px;
+        }
+        #topMenu .menuLink:hover{
+            color: black;
+            background-color: lightpink;
+        }
+
+        #experience{
+			padding-top: 20px;
+			display: none;
+		}
+        #skills{
+			padding-top: 20px;
+			display: none;
+		}
+        #education{
+			padding-top: 20px;
+			display: none;
+		}
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header1 in_bl" style="margin-bottom: 20px;">
+            <div class="txt_title1 txt_bold in_bl">
+                <a  href="#" class= "in_bl" style="margin : 10px; text-decoration: none; color: black;"> INTRODUCE. </a>
+                <a  href="#" class= "in_bl"><img src ="img/cathand1.png" style="width: 50px;"></a>
+            </div>
+        </div>
+
+        <div class="header2">
+            <div class="txt_title2">안녕하세요! <span class="txt_pink">코딩하는 고양이</span>입니다.</div>
+            <div class="in_bl">
+                <img src="img/notebook_icon.png" width="100px" style="float: left; margin-top: 70px;">
+                <img src="img/cat1.png" width="220px" style="float: left; margin-right: 10px auto;">
+                <div class="txt_title3" style="float: left; margin-top: 120px;">
+                    <div>프로그래밍에 관심이 많습니다.</div>
+                    <div>현재 열심히 공부하며 코딩 중!</div>
+                </div>          
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="box3"></div>
+            <div style="margin: 20px;">
+                <div>
+                    <div class="txt_title1 txt_bold" style="margin-top: 20px; text-shadow: 2px 2px 1px lightpink;">Cat_Coding</div>
+                    <div style="margin-top: 20px;"> Tel. 010-1234-5678 </div>
+                    <div> Email.CatCoding@gmail.com </div>
+                    <div> Addr. Incheon, Korea </div>
+                    <hr>
+                    현재시간 : <span id = "time"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contents">
+            <div id = "topMenu">
+                <ul>
+                    <li><a class = "menuLink" href ="https://saebyeol5285.github.io/intro/intro_upload.html">Home</a></li>
+                    <li><a class = "menuLink" href ="#" onclick="fnDetailEx()">Experience</a></li>
+                    <li><a class = "menuLink" href ="#" onclick="fnDetailSkill()">Skills</a></li>
+                    <li><a class = "menuLink" href ="#" onclick="fnDetailEdu()">Education</a></li>
+                </ul>
+            </div>
+            <div class="subcontents">
+                <div id="experience">
+                    <ul>
+                        <li>프론트엔드
+                            <ul>
+                                <li>HTML/CSS</li>
+                                <li>웹 페이지를 잘 만듭니다.</li>
+                            </ul>
+                        </li>
+                        <li>백엔드
+                            <ul>
+                                <li>자바를 잘 합니다.</li>
+                                <li>오라클은 더욱 잘 합니다.</li>
+                            </ul>
+                        </li>
+                        <li>계획
+                            <ul>
+                                <li>Spring</li>
+                                <li>MSA</li>
+                                <li>Fluter</li>
+                                <li>Node.js</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div id="skills"> 
+                    <ul>
+                        <li>자바</li>
+                        <li>오라클</li>
+                        <li>HTML&CSS</li>
+                    </ul>
+                </div>
+    
+                <div id="education">
+                    <table class="txt_contents" style="margin: 10px auto;">
+                        <t>
+                            <th>출신학교</th>
+                            <th>전공</th>
+                            <th>기간</th>
+                            <th>구분</th>
+                        </tr>
+                        <tr>
+                            <td>좋은대학교</td>
+                            <td>좋은학과</td>
+                            <td>2010.3 ~ 2013.2</td>
+                            <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>꽤좋은고등학교</td>
+                            <td> - </td>
+                            <td>2007.3 ~ 2009.2</td>
+                            <td>졸업</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>            
+        </div>    
+    
+    <div class="footers" style="text-align: center;">
+        <div style="padding: 35px"> Copyright Cat_Coding. All rights reserved.</div>
+    </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    setInterval(()=>{
+        let datetime = new Date();
+        let time = datetime.getHours() + ":" + datetime.getMinutes() + ":" + datetime.getSeconds()
+        let obj = document.querySelector("#time");
+        obj.innerHTML=time;
+    },1000);
+document.write
+    function fnDetailEx(){
+        let detail = document.querySelector("#experience");
+        if(detail.style.display == "block"){
+            detail.style.display = "none";
+            
+        }else{
+            detail.style.display = "block";
+        }
+    };
+    function fnDetailSkill(){
+        let detail = document.querySelector("#skills");
+        if(detail.style.display == "block"){
+            detail.style.display = "none";
+            
+        }else{
+            detail.style.display = "block";
+        }
+    };
+    function fnDetailEdu(){
+        let detail = document.querySelector("#education");
+        if(detail.style.display == "block"){
+            detail.style.display = "none";
+            
+        }else{
+            detail.style.display = "block";
+        }
+    };
+
+</script>
