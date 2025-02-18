@@ -134,6 +134,16 @@
             float: left; 
             margin-right: 10px auto;
         }
+        /* main-cat 위치 고정 */
+        #header_1st{
+            position: relative;
+        }
+        #header_2nd{
+            position: absolute;
+            top: 160px;
+            left: 380px;
+        }
+        /* side_bar */
         #git{
             width: 50px;
         }
@@ -143,6 +153,7 @@
         #naver{
             width: 50px;
         }
+
         /* 테이블 스타일 */
         table {
             width: 500px;
@@ -176,7 +187,7 @@
                 order : 1;
             }
             .header2{
-                height: 225px;
+                height: 250px;
                 order: 2;
             }
             .txt_title1{
@@ -196,11 +207,15 @@
                 font-size: 35px;
             }
             #note-book{
-                width: 50px;
+                width: 45px;
             }
             #main-cat{
-                width: 150px;
-                margin: 10px auto;
+                width: 140px;
+            }
+            #header_2nd{
+                position: absolute;
+                top: 130px;
+                left: 20px;
             }
             .noto-sans-kr-contents {
                 font-size: 15px;
@@ -268,8 +283,11 @@
                 font-size: 11px;
             }
             #education{
-            right: 20%;
-		}
+                right: 20%;
+		    }
+            #experience{
+                right: 20px;
+            }
         }
         #time{
             font-size: 30px;
@@ -316,7 +334,7 @@
         #experience{
             position: absolute;
             top : 50px;
-            left: 20%;
+            left: 10%;
             padding-top: 20px;
 		}
         #skills{
@@ -419,7 +437,7 @@
             <span class="material-symbols-outlined" onclick="fnMode()" id="icon">light_mode</span>
         </div>
 
-        <div class="header2">
+        <div class="header2"  id="header_1st">
             <div class="text-box noto-sans-kr-title txt_title2">
                 <span class="text">
                     <span class='txt_white' id="first"></span>
@@ -427,7 +445,7 @@
                     <span class='txt_white' id="last"></span>
                 </span>
             </div>
-            <div class="in_bl">
+            <div class="in_bl" id="header_2nd">
                 <img src="img/notebook_icon.png" id="note-book">
                 <img src="img/cat1.png" id="main-cat">
                 <div class="txt_header txt_white">
