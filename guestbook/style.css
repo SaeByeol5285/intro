@@ -1,0 +1,89 @@
+ /* 영역 */
+ .container{
+    width: 600px;
+    background-color: antiquewhite;
+    margin: 10px auto;
+    padding: 30px 70px;
+}
+#guestbook {
+    width: 500px;
+    margin: 10px auto;
+}
+#guestbook div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: rgb(255, 217, 171);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 7px;
+}
+#name {
+    margin-right: 160px;
+}
+#guest_list {
+    width: 480px;
+    margin: 30px auto;
+    padding: 10px;
+}
+/* table 스타일 */
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table {
+    width: 100%;
+    border: 2px solid black;
+    font-size: 13px;
+    table-layout: fixed;
+}
+td:first-child, th:first-child{
+    width: 20%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+td:nth-child(2),td:nth-child(2){
+    padding-left: 20px;
+}
+
+th {
+    background-color: bisque;
+}
+
+
+/* 이미지 */
+.cat-hand-box {
+    width: 80%;
+    height: 40px;
+    margin: 20px auto;
+}
+.cat-hand {
+    background-image: url("../img/cathand1.png");
+    background-repeat: repeat-x;
+    background-size: 60px;           
+}
+
+
+/* 폰트 */
+.noto-sans-kr-title {
+    font-family: "Noto Sans KR", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+.noto-sans-kr-contents {
+    font-family: "Noto Sans KR", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+h1{
+    text-align: center;
+}
+textarea, input {
+    font-family: "Noto Sans KR", serif;
+    font-size: 16px;
+}
