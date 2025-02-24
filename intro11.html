@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- <script type="module" src="canvas.js?ver=0.6"></script> -->
+
+
+
+    <title>코딩하는 고양이의 자기소개</title>
+
+    <style>
+        /* 영역구분 */
+        .container{
+            width: 1200px;
+            margin: 20px auto;
+        }
+        .header1{
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .header2{
+            width: 100%;
+            height: 350px;
+            background-color: black;
+            text-align: center;
+        }
+        .sidebar{
+            width: 280px;
+            height: 1200px;
+            float: left;
+            background-color: lightgrey;            
+        }
+        .contents{
+            position: relative;
+            width: 920px;
+            height: 1200px;
+            background-color: white;
+            float: left;
+        }
+        .subcontents{
+            position: relative;
+            width: 800px;
+            height: 1000px;
+            background-color: rgba(211, 211, 211, 0.388);
+            margin: 60px auto;
+        }
+        .footer{
+            width: 100%;
+            height: 100px;
+            background-color: black;
+            color: white;
+            clear: both;
+            text-align: center;
+        }
+        .side_box{
+            width: 170px;
+            height: 200px;
+            animation: imgChange 7s alternate infinite;
+            margin: 20px auto;
+            padding: 2px;
+        }
+        @keyframes imgChange {
+            from{
+                background-image: url(img/cat2.jpg);
+                background-size: cover;
+            }
+            to{
+                background-image: url(img/cat3.jpg);
+                background-size: cover;
+            }
+        }
+        
+        /* 텍스트 스타일 */
+        .txt_bold{
+            font-weight: bold;
+        }
+        .txt_white{
+            color: white;
+        }
+        .in_bl{
+            display: inline-block;
+        }
+        .txt_pink{
+            color: lightpink;
+        }
+        .txt_white{
+            color: white;   
+        }
+        .noto-sans-kr-title {
+            font-family: "Noto Sans KR", serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+        }
+        .txt_title1{
+            font-size: 40px;
+            color: black;
+        }
+        .txt_title2{
+            font-size: 55px;
+        }
+        .noto-sans-kr-contents {
+            font-family: "Noto Sans KR", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+        }
+        .txt_header{
+            float: left; 
+            margin-top: 120px;
+        }
+        .pink_shadow{
+            text-shadow: 2px 2px 1px lightpink;
+        }
+        .txt_highlight{
+            background-color: rgb(254, 204, 212);
+            font-weight: 700;
+        }
+        .txt_ul_li_title{
+            font-weight: 900;
+            font-size: 25px;
+        }
+        #experience li {
+            padding: 3px;
+        }
+
+        /*이미지*/
+        /* header1 */
+        #cat-hand{
+            width: 70px;
+        }
+        /* header2 */
+        #note-book{
+            width: 100px;
+            float: left;
+            margin-top: 70px;
+        }
+        #main-cat{
+            width: 220px;
+            float: left; 
+            margin-right: 10px auto;
+        }
+        /* main-cat 위치 고정 */
+        #header_1st{
+            position: relative;
+        }
+        #header_2nd{
+            position: absolute;
+            top: 160px;
+            left: 380px;
+        }
+        /* side_bar */
+        #git{
+            width: 50px;
+        }
+        #velog{
+            width: 90px;
+        }
+        #naver{
+            width: 50px;
+        }
+
+        /* 테이블 스타일 */
+        table {
+            width: 500px;
+            border:1px solid #222; 
+            border-collapse: collapse;
+            margin: 10px auto;
+        }
+        th,td {
+            border:1px solid #ccc; 
+            padding:5px;  
+            text-align: center; 
+        }
+        th{
+            background-color: lightgrey;
+        }
+        
+        /* 모바일 */
+        @media screen and (max-width : 768px) {
+            .container{
+                width: 90%;
+                margin: 20px auto;
+                display: flex;
+                flex-direction: column;
+            }
+            .header1, .header2{
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+            .header1{
+                order : 1;
+            }
+            .header2{
+                height: 250px;
+                order: 2;
+            }
+            .txt_title1{
+                font-size: 25px;
+            }
+            .txt_title2{
+                font-size: 30px;
+            }
+            .txt_header{
+                font-size: 9px;
+                margin-top: 70px;
+            }
+            #cat-hand{
+                width: 35px;
+            }
+            #icon{
+                font-size: 35px;
+            }
+            #note-book{
+                width: 45px;
+            }
+            #main-cat{
+                width: 140px;
+            }
+            #header_2nd{
+                position: absolute;
+                top: 130px;
+                left: 20px;
+            }
+            .noto-sans-kr-contents {
+                font-size: 15px;
+            }
+            .sidebar {
+                position: relative; 
+                width: 100%;        
+                height: auto;       
+                text-align: center;
+                order: 4;
+            }
+            .side_box{
+                float: left;
+                margin-left: 30px;
+                width: 80px;
+                height: 110px;
+            }
+            #git, #naver{
+                width: 25px;
+            }
+            #velog{
+                width: 45px;
+            }
+            .contents{
+                width: 100%;
+                height: auto;
+                display: block;
+                order: 3;
+            }
+            #topMenu{
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            #topMenu ul {
+                width: 100%;
+                list-style: none;
+                padding: 0;
+            }
+            #topMenu ul li {
+                width: 100% !important;
+                height: 40px;
+                display: block;
+                text-align: center;
+                clear: both;
+                margin: 2px 0;
+            }
+            #topMenu .menuLink{
+                font-size: 18px !important;
+                display: block;
+            }
+            .subcontents{
+                width: 90%;
+                margin-top: 240px;
+            }
+            .footer{
+                display: block;
+                width: 100%;
+                order: 5;
+            }
+            table {
+                width: 100%;
+                margin: 0 auto;
+                font-size: 11px;
+            }
+            #education{
+                right: 20%;
+		    }
+            #experience{
+                right: 20px;
+            }
+        }
+        #time{
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+        }
+
+
+        /*menu*/
+        #topMenu{
+            height: 60px;
+            width: 100%;
+            margin-top: 50px;
+        }
+        #topMenu ul li {
+            width: 24%;
+            height: 60px;
+            list-style: none;
+            color: white;
+            background-color: black;
+            float: left;
+            line-height: 60px;
+            text-align: center;
+        }
+        #topMenu .menuLink{
+            text-decoration: none;
+            color: white;
+            display: block;
+            width: 100%;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #topMenu .menuLink:hover{
+            color: black;
+            background-color: lightpink;
+        }
+        #topMenu .menuLink.active{
+            background-color: rgb(247, 140, 156);
+            color: black;
+
+        }
+
+        /*상세정보*/
+        #experience{
+            position: absolute;
+            top : 50px;
+            left: 10%;
+            padding-top: 20px;
+		}
+        #skills{
+            position: absolute;
+            top : 50px;
+            left: 10%;
+			padding-top: 20px;
+		}
+        #education{
+            position: absolute;
+            top : 50px;
+            left: 20%;
+			padding-top: 20px;
+		}
+        #guestbook{
+            position: absolute;
+            top : 50px;
+		}
+        .subcontents > div {
+            opacity: 0;
+            transform: translateY(-30px); /* 위로 살짝 올라간 상태 */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* 부드러운 전환 효과 */
+        }
+        .subcontents > div.show {
+            opacity: 1;
+            transform: translateY(0); /* 자연스럽게 나타나게 */
+        }
+
+        /* 기타 */
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        #sns{
+            margin: 20px auto;
+        }
+        #sns img{
+            margin-left: 12px;
+        }
+        .text_box{
+            display: block;
+        }
+        ul{
+            margin-bottom: 30px;
+        }
+
+        /* 다크모드 */
+        .light-mode{
+            background-color: white;
+            color: black;
+        }
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+        .dark-mode .contents, .dark-mode th, .dark-mode .sidebar{
+            background-color: #343434;
+        }
+        .dark-mode .subcontents{
+            background-color: #4f4f4f;
+        }
+        .dark-mode .txt_title1{
+            color: lightpink;
+        }
+        .dark-mode .pink_shadow{
+            text-shadow: 2px 2px 1px black;
+        }
+        .dark-mode .header1, .dark-mode #time {
+            color: white;
+        }
+        .dark-mode #cat-hand{
+            background-color: white;
+            border-radius: 40%;
+        }
+        .dark-mode #topMenu .menuLink.active{
+            background-color: rgb(247, 140, 156);
+            color: black;
+            text-shadow: none;
+        }
+        .dark-mode #topMenu .menuLink{
+            background-color: lightpink;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+        .dark-mode #topMenu .menuLink:hover{
+            color: black;
+            background-color: rgb(247, 140, 156);
+            text-shadow: none;
+        }
+        #icon{
+            cursor: pointer;
+            float: right;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        /* #canvas {
+            display: block;
+            background-image: url(data:image/jpeg;base64,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);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 180px;
+        }
+
+        .cat {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('img/cat4.png');
+            /* 고양이 이미지 경로 */
+            /* background-size: cover; */
+            /* transition: all 0.1s ease; */
+            /* pointer-events: none; */
+            /* 캔버스를 클릭할 때 고양이 요소가 방해되지 않게 */
+        /* } */
+
+        /* #img-ball {
+        width: 100px;
+        height: 100px;
+        } */ */
+
+    </style>
+
+</head>
+<body class="light-mode">
+    <div class="container noto-sans-kr-contents">
+        <div class="header1 in_bl noto-sans-kr-title txt_title1">
+            INTRODUCE
+            <a  href="https://saebyeol5285.github.io/intro/intro_upload.html"><img src ="img/cathand1.png" id ="cat-hand"></a>
+            <span class="material-symbols-outlined" onclick="fnMode()" id="icon">light_mode</span>
+        </div>
+
+        <div class="header2"  id="header_1st">
+            <div class="text-box noto-sans-kr-title txt_title2">
+                <span class="text">
+                    <span class='txt_white' id="first"></span>
+                    <br><span class='txt_pink' id="second"></span>
+                    <span class='txt_white' id="last"></span>
+                </span>
+            </div>
+            <div class="in_bl" id="header_2nd">
+                <img src="img/notebook_icon.png" id="note-book">
+                <img src="img/cat1.png" id="main-cat">
+                <div class="txt_header txt_white">
+                    <div>프로그래밍에 관심이 많습니다.</div>
+                    <div>현재 열심히 공부하며 코딩 중!</div>
+                </div>   
+                    <!-- <canvas id="canvas" width="0" height="0">
+                        <img src="/img/ball.png" id="img-ball" style="display: none;">
+                    </canvas> -->
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="side_box"></div>
+            <div style="margin: 20px;">
+                <div class="noto-sans-kr-title txt_title1 pink_shadow" style="margin-top: 20px;">Cat_Coding</div>
+                <div style="margin-top: 20px;"> <span class="txt_bold">Tel.</span> 010-1234-5678 </div>
+                <div> <span class="txt_bold">Email.</span> Cat_Coding@gmail.com </div>
+                <div> <span class="txt_bold">Addr.</span> Incheon, Korea </div>
+                <div id="sns">
+                    <a href = "https://github.com/SaeByeol5285/intro.git" target='_blank'><img src = "img/git-icon.png" id="git"></a>
+                    <a href = "https://velog.io/@saebyeol5285/posts" target='_blank'><img src = "img/velog-icon.png" id="velog"></a> 
+                    <a href = "https://blog.naver.com/cat_coding" target='_blank'><img src = "img/naver-blog-icon.png" id="naver"></a>
+                </div>
+                <hr>
+                <div>현재시간 : <span id = "time"></span></div>
+            </div>
+        </div>
+
+        <div class="contents">
+            <div id = "topMenu">
+                <ul>
+                    <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(0)">Home</a></li>
+                    <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(1)">Experience</a></li>
+                    <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(2)">Skills</a></li>
+                    <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(3)">Education</a></li>
+                    <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(4)">GuestBook</a></li>
+                </ul>
+            </div>
+            <div class="subcontents">
+                <div id ="experience">
+                    <ul>
+                        <li><span class="txt_ul_li_title">프론트엔드</span>
+                            <ul>
+                                <li>HTML/CSS</li>
+                                <li><span class="txt_highlight">홍보물, 교육자료 제작 경험</span>이 있습니다.</li>
+                                <li>깔끔한 웹페이지를 제작합니다.</li> 
+                            </ul>  
+                        </li>
+                        <li><span class="txt_ul_li_title">백엔드</span>
+                            <ul>
+                                <li>구조적으로 사고하고 계획을 세우는 작업을 좋아합니다.</li>
+                                <li><span class="txt_highlight">JAVA</span> : 기초 이론을 꼼꼼히 정리했습니다.</li>
+                                <li><span class="txt_highlight">DB</span> : Oracle을 이용한 데이터베이스 관리를 철저히 학습했습니다.</li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+    
+                <div id="skills"> 
+                    <ul>
+                        <li><span class="txt_ul_li_title">지금까지 습득한 기술</span>
+                            <ul>
+                                <li>JAVA</li>
+                                <li>Oracle DB</li>
+                                <li>HTML&CSS</li>
+                            </ul>
+                        </li>
+                        <li><span class="txt_ul_li_title">앞으로의 학습 계획</span>
+                            <ul>
+                                <li>Spring</li>
+                                <li>MSA</li>
+                                <li>Flutter</li>
+                                <li>Node.js</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div id="education">
+                    <table>
+                        <tr>
+                            <th>출신 학교</th>
+                            <th>전공</th>
+                            <th>기간</th>
+                            <th>구분</th>
+                        </tr>
+                        <tr>
+                            <td>00대학교</td>
+                            <td>00학과</td>
+                            <td>2016.3 ~ 2023.2</td>
+                            <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>00고등학교</td>
+                            <td> - </td>
+                            <td>2012.3 ~ 2016.2</td>
+                            <td>졸업</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="guestbook">
+                    <div>
+                        <iframe src="/guestbook/index.html" width="800px" height="800px"></iframe>
+                    </div>
+                </div>
+            </div>                
+        </div>
+        <div class="footer">
+            <div style="padding: 35px"> Copyright Cat_Coding. All rights reserved.</div>
+        </div>
+    </div>
+        
+    
+    
+</body>
+</html>
+
+<script>
+   
+    //------------시계기능------------
+    setInterval(()=>{
+        let datetime = new Date();
+        let time = datetime.getHours() + ":" + datetime.getMinutes() + ":" + datetime.getSeconds()
+        let obj = document.querySelector("#time");
+        obj.innerHTML=time;
+    },1000);
+
+    //------------메뉴 클릭시 설명 펼쳐보기------------
+    function fnDetail(num){
+
+        let experience = document.getElementById("experience");
+        let skills = document.getElementById("skills");
+        let education = document.getElementById("education");
+        let guestbook = document.getElementById("guestbook");
+
+        let menuLinks = document.querySelectorAll("#topMenu .menuLink");
+
+        for(let i=0; i<menuLinks.length; i++){
+            menuLinks[i].classList.remove("active");
+        }
+
+        experience.classList.remove("show");
+        skills.classList.remove("show");
+        education.classList.remove("show");
+        guestbook.classList.remove("show");
+
+
+        if(num == 1){
+            experience.classList.add("show"); //내용 보이기
+            menuLinks[1].classList.add("active"); //현재 메뉴탭은 짙은 색으로 보이기
+        } else if(num == 2){
+            skills.classList.add("show");
+            menuLinks[2].classList.add("active");
+        } else if(num == 3){
+            education.classList.add("show");
+            menuLinks[3].classList.add("active");
+        } else if(num == 4){
+            guestbook.classList.add("show");
+            menuLinks[4].classList.add("active");
+        }else if(num == 0){
+            if(!confirm("Home으로 다시 돌아가시겠습니까?")){
+                return;
+            }else{
+                location.href ="https://saebyeol5285.github.io/intro/intro_upload.html";
+            }
+        };
+    };
+    
+    //------------라이트,다크 모드 지원------------
+    function fnMode(){
+        let body = document.body;
+        let icon = document.querySelector("#icon");
+
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        icon.innerText = body.classList.contains('light-mode')? 'light_mode' : 'dark_mode';
+    };
+    
+    //------------메인 타이틀 타이핑 효과------------
+    let title = "안녕하세요! 코딩하는 고양이입니다.";
+    let text = document.querySelector(".text");
+
+    let i = 0;
+    let intervalId = setInterval(typing, 200);
+
+    function typing() {
+        let txt = title.charAt(i);
+        if(i < 6){
+            document.querySelector("#first").innerHTML += txt;
+        } else if(i < 15){
+            document.querySelector("#second").innerHTML += txt;
+        } else {
+            document.querySelector("#last").innerHTML += txt;
+        }
+        i++;
+        if(i>18){
+            clearInterval(intervalId);
+        }
+    };
+
+</script>

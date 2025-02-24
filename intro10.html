@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+    <title>코딩하는 고양이의 자기소개</title>
+
+    <style>
+        /* 영역구분 */
+        .container{
+            width: 1200px;
+            margin: 20px auto;
+        }
+        .header1{
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .header2{
+            width: 100%;
+            height: 350px;
+            background-color: black;
+            text-align: center;
+        }
+        .sidebar{
+            width: 280px;
+            height: 800px;
+            float: left;
+            background-color: lightgrey;            
+        }
+        .contents{
+            position: relative;
+            width: 920px;
+            height: 800px;
+            background-color: white;
+            float: left;
+        }
+        .subcontents{
+            position: relative;
+            width: 800px;
+            height: 500px;
+            background-color: rgba(211, 211, 211, 0.388);
+            margin: 60px auto;
+        }
+        .footer{
+            width: 100%;
+            height: 100px;
+            background-color: black;
+            color: white;
+            clear: both;
+            text-align: center;
+        }
+        .side_box{
+            width: 170px;
+            height: 200px;
+            animation: imgChange 7s alternate infinite;
+            margin: 20px auto;
+            padding: 2px;
+        }
+        @keyframes imgChange {
+            from{
+                background-image: url(img/cat2.jpg);
+                background-size: cover;
+            }
+            to{
+                background-image: url(img/cat3.jpg);
+                background-size: cover;
+            }
+        }
+        
+        /* 텍스트 스타일 */
+        .txt_bold{
+            font-weight: bold;
+        }
+        .txt_white{
+            color: white;
+        }
+        .in_bl{
+            display: inline-block;
+        }
+        .txt_pink{
+            color: lightpink;
+        }
+        .txt_white{
+            color: white;   
+        }
+        .noto-sans-kr-title {
+            font-family: "Noto Sans KR", serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+        }
+        .txt_title1{
+            font-size: 40px;
+            color: black;
+        }
+        .txt_title2{
+            font-size: 55px;
+        }
+        .noto-sans-kr-contents {
+            font-family: "Noto Sans KR", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+        }
+        .txt_header{
+            float: left; 
+            margin-top: 120px;
+        }
+        .pink_shadow{
+            text-shadow: 2px 2px 1px lightpink;
+        }
+        .txt_highlight{
+            background-color: rgb(254, 204, 212);
+            font-weight: 700;
+        }
+        .txt_ul_li_title{
+            font-weight: 900;
+            font-size: 25px;
+        }
+        #experience li {
+            padding: 3px;
+        }
+
+        /*이미지*/
+        /* header1 */
+        #cat-hand{
+            width: 70px;
+        }
+        /* header2 */
+        #note-book{
+            width: 100px;
+            float: left;
+            margin-top: 70px;
+        }
+        #main-cat{
+            width: 220px;
+            float: left; 
+            margin-right: 10px auto;
+        }
+        /* main-cat 위치 고정 */
+        #header_1st{
+            position: relative;
+        }
+        #header_2nd{
+            position: absolute;
+            top: 160px;
+            left: 380px;
+        }
+        /* side_bar */
+        #git{
+            width: 50px;
+        }
+        #velog{
+            width: 90px;
+        }
+        #naver{
+            width: 50px;
+        }
+
+        /* 테이블 스타일 */
+        table {
+            width: 500px;
+            border:1px solid #222; 
+            border-collapse: collapse;
+            margin: 10px auto;
+        }
+        th,td {
+            border:1px solid #ccc; 
+            padding:5px;  
+            text-align: center; 
+        }
+        th{
+            background-color: lightgrey;
+        }
+        
+        /* 모바일 */
+        @media screen and (max-width : 768px) {
+            .container{
+                width: 90%;
+                margin: 20px auto;
+                display: flex;
+                flex-direction: column;
+            }
+            .header1, .header2{
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+            .header1{
+                order : 1;
+            }
+            .header2{
+                height: 250px;
+                order: 2;
+            }
+            .txt_title1{
+                font-size: 25px;
+            }
+            .txt_title2{
+                font-size: 30px;
+            }
+            .txt_header{
+                font-size: 9px;
+                margin-top: 70px;
+            }
+            #cat-hand{
+                width: 35px;
+            }
+            #icon{
+                font-size: 35px;
+            }
+            #note-book{
+                width: 45px;
+            }
+            #main-cat{
+                width: 140px;
+            }
+            #header_2nd{
+                position: absolute;
+                top: 130px;
+                left: 20px;
+            }
+            .noto-sans-kr-contents {
+                font-size: 15px;
+            }
+            .sidebar {
+                position: relative; 
+                width: 100%;        
+                height: auto;       
+                text-align: center;
+                order: 4;
+            }
+            .side_box{
+                float: left;
+                margin-left: 30px;
+                width: 80px;
+                height: 110px;
+            }
+            #git, #naver{
+                width: 25px;
+            }
+            #velog{
+                width: 45px;
+            }
+            .contents{
+                width: 100%;
+                height: auto;
+                display: block;
+                order: 3;
+            }
+            #topMenu{
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            #topMenu ul {
+                width: 100%;
+                list-style: none;
+                padding: 0;
+            }
+            #topMenu ul li {
+                width: 100% !important;
+                height: 40px;
+                display: block;
+                text-align: center;
+                clear: both;
+                margin: 2px 0;
+            }
+            #topMenu .menuLink{
+                font-size: 18px !important;
+                display: block;
+            }
+            .subcontents{
+                width: 90%;
+                margin-top: 240px;
+            }
+            .footer{
+                display: block;
+                width: 100%;
+                order: 5;
+            }
+            table {
+                width: 100%;
+                margin: 0 auto;
+                font-size: 11px;
+            }
+            #education{
+                right: 20%;
+		    }
+            #experience{
+                right: 20px;
+            }
+        }
+        #time{
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+        }
+
+
+        /*menu*/
+        #topMenu{
+            height: 60px;
+            width: 100%;
+            margin-top: 50px;
+        }
+        #topMenu ul li {
+            width: 24%;
+            height: 60px;
+            list-style: none;
+            color: white;
+            background-color: black;
+            float: left;
+            line-height: 60px;
+            text-align: center;
+        }
+        #topMenu .menuLink{
+            text-decoration: none;
+            color: white;
+            display: block;
+            width: 100%;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #topMenu .menuLink:hover{
+            color: black;
+            background-color: lightpink;
+        }
+        #topMenu .menuLink.active{
+            background-color: rgb(247, 140, 156);
+            color: black;
+
+        }
+
+        /*상세정보*/
+        #experience{
+            position: absolute;
+            top : 50px;
+            left: 10%;
+            padding-top: 20px;
+		}
+        #skills{
+            position: absolute;
+            top : 50px;
+            left: 10%;
+			padding-top: 20px;
+		}
+        #education{
+            position: absolute;
+            top : 50px;
+            left: 20%;
+			padding-top: 20px;
+		}
+        .subcontents > div {
+            opacity: 0;
+            transform: translateY(-30px); /* 위로 살짝 올라간 상태 */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* 부드러운 전환 효과 */
+        }
+        .subcontents > div.show {
+            opacity: 1;
+            transform: translateY(0); /* 자연스럽게 나타나게 */
+        }
+
+        /* 기타 */
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        #sns{
+            margin: 20px auto;
+        }
+        #sns img{
+            margin-left: 12px;
+        }
+        .text_box{
+            display: block;
+        }
+        ul{
+            margin-bottom: 30px;
+        }
+
+        /* 다크모드 */
+        .light-mode{
+            background-color: white;
+            color: black;
+        }
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+        .dark-mode .contents, .dark-mode th, .dark-mode .sidebar{
+            background-color: #343434;
+        }
+        .dark-mode .subcontents{
+            background-color: #4f4f4f;
+        }
+        .dark-mode .txt_title1{
+            color: lightpink;
+        }
+        .dark-mode .pink_shadow{
+            text-shadow: 2px 2px 1px black;
+        }
+        .dark-mode .header1, .dark-mode #time {
+            color: white;
+        }
+        .dark-mode #cat-hand{
+            background-color: white;
+            border-radius: 40%;
+        }
+        .dark-mode #topMenu .menuLink.active{
+            background-color: rgb(247, 140, 156);
+            color: black;
+            text-shadow: none;
+        }
+        .dark-mode #topMenu .menuLink{
+            background-color: lightpink;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+        }
+        .dark-mode #topMenu .menuLink:hover{
+            color: black;
+            background-color: rgb(247, 140, 156);
+            text-shadow: none;
+        }
+        #icon{
+            cursor: pointer;
+            float: right;
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body class="light-mode">
+    <div class="container noto-sans-kr-contents">
+        <div class="header1 in_bl noto-sans-kr-title txt_title1">
+            INTRODUCE
+            <a  href="https://saebyeol5285.github.io/intro/intro_upload.html"><img src ="img/cathand1.png" id ="cat-hand"></a>
+            <span class="material-symbols-outlined" onclick="fnMode()" id="icon">light_mode</span>
+        </div>
+
+        <div class="header2"  id="header_1st">
+            <div class="text-box noto-sans-kr-title txt_title2">
+                <span class="text">
+                    <span class='txt_white' id="first"></span>
+                    <br><span class='txt_pink' id="second"></span>
+                    <span class='txt_white' id="last"></span>
+                </span>
+            </div>
+            <div class="in_bl" id="header_2nd">
+                <img src="img/notebook_icon.png" id="note-book">
+                <img src="img/cat1.png" id="main-cat">
+                <div class="txt_header txt_white">
+                    <div>프로그래밍에 관심이 많습니다.</div>
+                    <div>현재 열심히 공부하며 코딩 중!</div>
+                </div>         
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="side_box"></div>
+            <div style="margin: 20px;">
+                <div class="noto-sans-kr-title txt_title1 pink_shadow" style="margin-top: 20px;">Cat_Coding</div>
+                <div style="margin-top: 20px;"> <span class="txt_bold">Tel.</span> 010-1234-5678 </div>
+                <div> <span class="txt_bold">Email.</span> Cat_Coding@gmail.com </div>
+                <div> <span class="txt_bold">Addr.</span> Incheon, Korea </div>
+                <div id="sns">
+                    <a href = "https://github.com/SaeByeol5285/intro.git" target='_blank'><img src = "img/git-icon.png" id="git"></a>
+                    <a href = "https://velog.io/@saebyeol5285/posts" target='_blank'><img src = "img/velog-icon.png" id="velog"></a> 
+                    <a href = "https://blog.naver.com/cat_coding" target='_blank'><img src = "img/naver-blog-icon.png" id="naver"></a>
+                </div>
+                <hr>
+                <div>현재시간 : <span id = "time"></span></div>
+                <a href="guestbook/index.html" class="noto-sans-kr-title txt_title1 pink_shadow">방명록click!</a>
+            </div>
+        </div>
+
+        <div class="contents">
+            <div id = "topMenu">
+                <ul>
+                    <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(0)">Home</a></li>
+                    <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(1)">Experience</a></li>
+                    <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(2)">Skills</a></li>
+                    <li><a class = "menuLink" href ="javascript:;" onclick="fnDetail(3)">Education</a></li>
+                </ul>
+            </div>
+            <div class="subcontents">
+                <div id ="experience">
+                    <ul>
+                        <li><span class="txt_ul_li_title">프론트엔드</span>
+                            <ul>
+                                <li>HTML/CSS</li>
+                                <li><span class="txt_highlight">홍보물, 교육자료 제작 경험</span>이 있습니다.</li>
+                                <li>깔끔한 웹페이지를 제작합니다.</li> 
+                            </ul>  
+                        </li>
+                        <li><span class="txt_ul_li_title">백엔드</span>
+                            <ul>
+                                <li>구조적으로 사고하고 계획을 세우는 작업을 좋아합니다.</li>
+                                <li><span class="txt_highlight">JAVA</span> : 기초 이론을 꼼꼼히 정리했습니다.</li>
+                                <li><span class="txt_highlight">DB</span> : Oracle을 이용한 데이터베이스 관리를 철저히 학습했습니다.</li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+    
+                <div id="skills"> 
+                    <ul>
+                        <li><span class="txt_ul_li_title">지금까지 습득한 기술</span>
+                            <ul>
+                                <li>JAVA</li>
+                                <li>Oracle DB</li>
+                                <li>HTML&CSS</li>
+                            </ul>
+                        </li>
+                        <li><span class="txt_ul_li_title">앞으로의 학습 계획</span>
+                            <ul>
+                                <li>Spring</li>
+                                <li>MSA</li>
+                                <li>Flutter</li>
+                                <li>Node.js</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div id="education">
+                    <table>
+                        <tr>
+                            <th>출신 학교</th>
+                            <th>전공</th>
+                            <th>기간</th>
+                            <th>구분</th>
+                        </tr>
+                        <tr>
+                            <td>00대학교</td>
+                            <td>00학과</td>
+                            <td>2016.3 ~ 2023.2</td>
+                            <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>00고등학교</td>
+                            <td> - </td>
+                            <td>2012.3 ~ 2016.2</td>
+                            <td>졸업</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>                
+        </div>
+        <div class="footer">
+            <div style="padding: 35px"> Copyright Cat_Coding. All rights reserved.</div>
+        </div>
+    </div>
+        
+    
+    
+</body>
+</html>
+
+<script>
+   
+    //------------시계기능------------
+    setInterval(()=>{
+        let datetime = new Date();
+        let time = datetime.getHours() + ":" + datetime.getMinutes() + ":" + datetime.getSeconds()
+        let obj = document.querySelector("#time");
+        obj.innerHTML=time;
+    },1000);
+
+    //------------메뉴 클릭시 설명 펼쳐보기------------
+    function fnDetail(num){
+
+        let experience = document.getElementById("experience");
+        let skills = document.getElementById("skills");
+        let education = document.getElementById("education");
+        let menuLinks = document.querySelectorAll("#topMenu .menuLink");
+
+        for(let i=0; i<menuLinks.length; i++){
+            menuLinks[i].classList.remove("active");
+        }
+
+        experience.classList.remove("show");
+        skills.classList.remove("show");
+        education.classList.remove("show");
+
+        if(num == 1){
+            experience.classList.add("show"); //내용 보이기
+            menuLinks[1].classList.add("active"); //현재 메뉴탭은 짙은 색으로 보이기
+        } else if(num == 2){
+            skills.classList.add("show");
+            menuLinks[2].classList.add("active");
+        } else if(num == 3){
+            education.classList.add("show");
+            menuLinks[3].classList.add("active");
+        } else if(num == 0){
+            if(!confirm("Home으로 다시 돌아가시겠습니까?")){
+                return;
+            }else{
+                location.href ="https://saebyeol5285.github.io/intro/intro_upload.html";
+            }
+        };
+    };
+    
+    //------------라이트,다크 모드 지원------------
+    function fnMode(){
+        let body = document.body;
+        let icon = document.querySelector("#icon");
+
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        icon.innerText = body.classList.contains('light-mode')? 'light_mode' : 'dark_mode';
+    };
+    
+    //------------메인 타이틀 타이핑 효과------------
+    let title = "안녕하세요! 코딩하는 고양이입니다.";
+    let text = document.querySelector(".text");
+
+    let i = 0;
+    let intervalId = setInterval(typing, 200);
+
+    function typing() {
+        let txt = title.charAt(i);
+        if(i < 6){
+            document.querySelector("#first").innerHTML += txt;
+        } else if(i < 15){
+            document.querySelector("#second").innerHTML += txt;
+        } else {
+            document.querySelector("#last").innerHTML += txt;
+        }
+        i++;
+        if(i>18){
+            clearInterval(intervalId);
+        }
+    };
+
+</script>

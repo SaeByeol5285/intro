@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <title>방명록</title>
+
+</head>
+<body>
+
+    <div class="container noto-sans-kr-contents">
+        <h1 class="noto-sans-kr-title">📜고양이 발자국 남기기📜</h1>
+        <form id="guestbook">
+            <div> 
+                🐾 이름 : <input id="name" placeholder="이름">
+            </div>
+            <div> 
+                🐾 방명록 : <textarea id="message" placeholder="방명록을 남겨주세요." cols="35" rows="4" ></textarea>
+                <button type="submit">저장</button>
+            </div>
+        </form>
+        <div class="cat-hand-box cat-hand"></div>
+        <table id="guest_list">
+            <tr>
+                <th>이름</th>
+                <th>내용</th>
+            </tr>    
+        </table>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js" defer></script>
+</html>
